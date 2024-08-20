@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="math.js"></script>
         
         <title>DSM4 2024-2</title>
 
@@ -21,13 +24,48 @@
             {
                 flex-direction:column;
             }
+            .mainform
+            {
+                width:250px;
+                border-radius:15px;
+                background:#eee;
+                box-shadow:0 2px 10px 1px rgba(0, 0, 0, 0.65);
+            }
+            input, button, select, textarea
+            {
+                border:none;
+                transition:0.3s;
+            }
+            input:focus, button:focus, select:focus, textarea:focus
+            {
+                outline:0;
+            }
+            .mainlabl
+            {
+                font-size:15px;
+                font-weight:bold;
+                color:#3f64dd;
+            }
+            .maininpt
+            {
+                border:none;
+                border-radius:5px;
+                padding:5px;
+                background:white;
+                color:#888;
+            }
+            .mainbutn
+            {
+               color:#eee;
+               background:#3f64dd;
+            }
         </style>
     </head>
     <body>
         <header>
             <img src="img/logo.jpg" class="logo">
 
-            <nav class="navigate">
+            <nav class="navigate row">
                 <a href="http://">Home</a>
                 <a href="http://">Page 1</a>
                 <a href="http://">Page 2</a>
@@ -36,18 +74,20 @@
 
         <main>
             <form action="" class="mainform col">
-                <label class="mainlabl">NOME</label>
+                <label class="mainlabl">Valor A</label>
                 <input type="text" class="maininpt">
                 <br>
-                <label class="mainlabl">SENHA</label>
+                <label class="mainlabl">Valor B</label>
                 <input type="password" class="maininpt">
                 <br>
-                <button class="mainbutn">ENTRAR</button>
+                <button class="mainbutn" onclick="soma($('#valor_a').val(), $('#valor_b').val())">CALCULAR</button>
             </form>
         </main>
 
         <footer>
-
+            <ul>
+                <li></li>
+            </ul>
         </footer>
     </body>
 </html>
