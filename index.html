@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="math.js"></script>
         
         <title>DSM4 2024-2</title>
 
@@ -71,18 +74,20 @@
 
         <main>
             <form action="" class="mainform col">
-                <label class="mainlabl">NOME</label>
+                <label class="mainlabl">Valor A</label>
                 <input type="text" class="maininpt">
                 <br>
-                <label class="mainlabl">SENHA</label>
+                <label class="mainlabl">Valor B</label>
                 <input type="password" class="maininpt">
                 <br>
-                <button class="mainbutn">ENTRAR</button>
+                <button class="mainbutn" onclick="soma($('#valor_a').val(), $('#valor_b').val())">CALCULAR</button>
             </form>
         </main>
 
         <footer>
-
+            <ul>
+                <li></li>
+            </ul>
         </footer>
     </body>
 </html>
